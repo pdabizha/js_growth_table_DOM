@@ -20,8 +20,8 @@ document.querySelectorAll('.button').forEach((button) => {
   button.addEventListener('click', handleButtonClick);
 });
 
-function handleButtonClick(event) {
-  const action = event.target.classList;
+function handleButtonClick(e) {
+  const action = e.target.classList;
 
   for (const [className, actionFunc] of Object.entries(actions)) {
     if (action.contains(className)) {
